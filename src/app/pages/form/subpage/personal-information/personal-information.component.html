@@ -1,0 +1,30 @@
+<p>personal-information works!</p>
+
+<form>
+  <div class="flex flex-col">
+    <label for="">Student ID</label>
+    <input
+    required
+  type="text"
+  placeholder="Student Identification"
+  class="input input-bordered  w-full" />
+  </div>
+  <div class="flex flex-col">
+    <label for="">Age</label>
+    <input
+    required
+    type="number"
+    placeholder="Student Age"
+    class="input input-bordered  w-full" />  </div> 
+  <div class="flex flex-col gap-2">
+    <label for="">Gender</label>
+    <div class="flex items-center gap-2">
+      <input type="radio" id="male" required class="radio  "  name="gender">
+      <label for="male" id="radio"  >Male</label>
+    </div>
+    <div class="flex items-center gap-2">
+      <input type="radio" id="Female" required  class="radio"  name="gender">
+      <label for="Female"  >Female</label>
+    </div>
+  </div> 
+</form>
