@@ -1,7 +1,7 @@
 <div class=" p-4  h-full flex flex-col justify-between ">
 <div>
   
-  <div class="space-y-1 h-[6rem]">
+  <div class="space-y-1 min-h-[6rem]">
     <p class="font-semibold text-3xl">
       Student {{ progressForm[currentRoute].title }}
   </p>
@@ -9,7 +9,7 @@
     {{ progressForm[currentRoute].description }}
   </div>
 </div>
-<div class="flex w-full gap-4">
+<div class="flex w-full gap-4 flex-wrap pb-5">
   @for (progress of progressForm; track $index) {
   <div class="flex-1">
     <a [routerLink]="[$index + 1]" (click)="routeCurrent($index)">
