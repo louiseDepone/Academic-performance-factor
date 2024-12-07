@@ -1,22 +1,24 @@
-
 <form class="flex flex-col gap-3">
   <div class="flex flex-col">
     <label for="">Weekly Study Time</label>
     <div class="flex gap-2 items-center">
-
       <input
-      required
-      type="number"
-      placeholder="Weekly Study Time"
-      class="input input-bordered w-full"
+        [defaultValue]="form().studyTime"
+        (input)="updateForm('studyTime', $event.target)"
+        required
+        type="number"
+        placeholder="Weekly Study Time"
+        class="input input-bordered w-full"
       />
-      <p> hr(s) </p>
+      <p>hr(s)</p>
     </div>
   </div>
   <div class="flex flex-col">
     <label for="">Absences</label>
     <input
       required
+      [defaultValue]="form().absences"
+      (input)="updateForm('absences', $event.target)"
       type="number"
       placeholder="Student Absences"
       class="input input-bordered w-full"
@@ -25,11 +27,29 @@
   <div class="flex flex-col gap-2">
     <label for="">Tutoring</label>
     <div class="flex items-center gap-2">
-      <input type="radio" id="male" required value=0 class="radio" name="Tutoring" />
+      <input
+        type="radio"
+        id="male"
+        [defaultChecked]="(form().tutoring === '0')"
+        (input)="updateForm('tutoring', $event.target)"
+        required
+        value="0"
+        class="radio"
+        name="Tutoring"
+      />
       <label for="male" id="radio">No</label>
     </div>
     <div class="flex items-center gap-2">
-      <input type="radio" id="Female" required value=1 class="radio" name="Tutoring" />
+      <input
+        [defaultChecked]="(form().tutoring === '1')"
+        (input)="updateForm('tutoring', $event.target)"
+        type="radio"
+        id="Female"
+        required
+        value="1"
+        class="radio"
+        name="Tutoring"
+      />
       <label for="Female">Yes</label>
     </div>
   </div>

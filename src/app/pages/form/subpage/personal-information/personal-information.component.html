@@ -3,6 +3,8 @@
   <div class="flex flex-col">
     <label for="">Student ID</label>
     <input
+    (input)="updateForm('studentId', $event.target)"
+    [defaultValue]="form().studentId"
     required
   type="text"
   placeholder="Student Identification"
@@ -11,18 +13,29 @@
   <div class="flex flex-col">
     <label for="">Age</label>
     <input
+
+    (input)="updateForm('age', $event.target)"
     required
+
+    [defaultValue]="form().age"
     type="number"
     placeholder="Student Age"
     class="input input-bordered  w-full" />  </div> 
   <div class="flex flex-col gap-2">
     <label for="">Gender</label>
     <div class="flex items-center gap-2">
-      <input type="radio" id="male" required class="radio  " value=0  name="gender">
+      <input
+      [defaultChecked]="(form().gender === '0')"
+    (input)="updateForm('gender', $event.target)"
+      type="radio" id="male" required class="radio  " value=0  name="gender">
       <label for="male" id="radio"  >Male</label>
     </div>
     <div class="flex items-center gap-2">
-      <input type="radio" id="Female" required  class="radio" value=1  name="gender">
+      <input
+      
+      [defaultChecked]="(form().gender === '1')"
+    (input)="updateForm('gender', $event.target)"
+      type="radio" id="Female" required  class="radio" value=1  name="gender">
       <label for="Female"  >Female</label>
     </div>
   </div> 

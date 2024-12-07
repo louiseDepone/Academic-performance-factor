@@ -1,14 +1,31 @@
-
 <form class="flex flex-col gap-3">
-  
   <div class="flex flex-col gap-2">
     <label for="">Extracurricular</label>
     <div class="flex items-center gap-2">
-      <input type="radio" id="male" required value=0 class="radio" name="Extracurricular" />
+      <input
+      [defaultChecked]="(form().extracuricularg === '0')"
+      (input)="updateForm('extracuricularg', $event.target)"
+        type="radio"
+        id="male"
+        required
+        value="0"
+        class="radio"
+        name="Extracurricular"
+      />
       <label for="male" id="radio">No</label>
     </div>
     <div class="flex items-center gap-2">
-      <input type="radio" id="Female" required value=1 class="radio" name="Extracurricular" />
+      <input
+
+      [defaultChecked]="(form().extracuricularg === '1')"
+      (input)="updateForm('extracuricularg', $event.target)"
+        type="radio"
+        id="Female"
+        required
+        value="1"
+        class="radio"
+        name="Extracurricular"
+      />
       <label for="Female">Yes</label>
     </div>
   </div>

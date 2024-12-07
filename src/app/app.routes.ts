@@ -4,6 +4,7 @@ import { PersonalInformationComponent } from './pages/form/subpage/personal-info
 import { ParentalDetailsComponent } from './pages/form/subpage/parental-details/parental-details.component';
 import { AcademicDetailsComponent } from './pages/form/subpage/academic-details/academic-details.component';
 import { ExtracurricularActivitiesComponent } from './pages/form/subpage/extracurricular-activities/extracurricular-activities.component';
+import { SubmitComponent } from './pages/form/subpage/submit/submit.component';
 
 export const routes: Routes = [
   {
@@ -25,6 +26,10 @@ export const routes: Routes = [
       {
         path: '4',
         component: ExtracurricularActivitiesComponent
+      },
+      {
+        path: '5',
+        component: SubmitComponent
       }
 
     ]
