@@ -1,17 +1,80 @@
 <form class="flex flex-col gap-3">
-  <div class="flex flex-col">
+  <div class="flex flex-col gap-2">
+    <label for="">Year Level</label>
+    <select
+      required
+      (change)="updateForm('yearLevel', $event.target)"
+      class="select select-bordered w-full"
+      [value]="form().yearLevel"
+      
+    >
+      <option value="" [defaultSelected]="form().yearLevel == ''" disabled>Select Year Level</option>
+      <option value="1" >Grade 7</option>
+      <option value="2">Grade 8</option>
+      <option value="3">Grade 9</option>
+      <option value="4">Grade 10</option>
+    </select>
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <label for="">Subject</label>
+    <select
+      required
+      (change)="updateForm('subject', $event.target)"
+      class="select select-bordered w-full"
+      [value]="form().subject"
+    >
+      <option value="" [defaultSelected]="form().subject == null"disabled >Select Subject</option>
+      <option value="1">Math</option>
+      <option value="2">Science</option>
+      <option value="3">English</option>
+    </select>
+  </div>
+
+  <div class="flex flex-col gap-2">
     <label for="">Weekly Study Time</label>
-    <div class="flex gap-2 items-center">
+    <!-- Low, Average, High  radio-->
+    <div class="flex items-center gap-2">
       <input
-        [defaultValue]="form().studyTime"
+        type="radio"
+        id="low"
+        [defaultChecked]="(form().studyTime === '0')"
         (input)="updateForm('studyTime', $event.target)"
         required
-        type="number"
-        placeholder="Weekly Study Time"
-        class="input input-bordered w-full"
+        value="0"
+        class="radio"
+        name="WeeklyStudyTime"
       />
-      <p>hr(s)</p>
+      <label for="low" id="radio">Low</label>
     </div>
+    <div class="flex items-center gap-2">
+      <input
+        [defaultChecked]="(form().studyTime === '1')"
+        (input)="updateForm('studyTime', $event.target)"
+        type="radio"
+        id="average"
+        required
+        value="1"
+        class="radio"
+        name="WeeklyStudyTime"
+      />
+      <label for="average">Average</label>
+      </div>  
+    <div class="flex items-center gap-2">
+      <input
+        [defaultChecked]="(form().studyTime === '2')"
+        (input)="updateForm('studyTime', $event.target)"
+        type="radio"
+        id="high"
+        required
+        value="2"
+        class="radio"
+        name="WeeklyStudyTime"
+      />
+      <label for="high">High</label>
+      </div>
+
+     
   </div>
   <div class="flex flex-col">
     <label for="">Absences</label>

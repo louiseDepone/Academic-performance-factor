@@ -13,12 +13,16 @@ export class AcademicDetailsComponent {
     formService: FormService = inject(FormService);
     form = signal<{
       tutoring: string;
-      studyTime: number | null;
+      studyTime: string;
       absences: number | null;
+      yearLevel: string;
+      subject: string ;
     }>({
       tutoring: '',
-      studyTime: null,
+      studyTime: '',
       absences: null,
+      yearLevel: '',
+      subject: ''
     })
   
     constructor() {
@@ -27,11 +31,14 @@ export class AcademicDetailsComponent {
         tutoring: initialData.tutoring,
         studyTime: initialData.studyTime,
         absences: initialData.absences,
+        yearLevel: initialData.yearLevel,
+        subject: initialData.subject,
+        
       });
     }
   
     updateForm(key: string, value: any) {
-      const updatedValue = key === 'studyTime' || key === 'absences' ? parseInt(value.value, 10) || null : value.value;
+      const updatedValue = key === 'absences' ? parseInt(value.value, 10) || null : value.value;
   
       this.form.update((old) => ({
         ...old,

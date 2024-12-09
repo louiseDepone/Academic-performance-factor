@@ -43,8 +43,10 @@ export class FormService {
       progress: 0,
       form: {
         tutoring: '',
-        studyTime: null,
-        absences: null,
+        studyTime: '',
+        absences: '',
+        yearLevel:'',
+        subject:null
       },
       description: "This section focuses on the student’s study habits, attendance, tutoring participation, and academic achievements. These details provide insight into the factors contributing to their academic success or challenges, allowing for performance analysis and improvement strategies."
     },
