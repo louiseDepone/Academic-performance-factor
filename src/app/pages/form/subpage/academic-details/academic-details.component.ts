@@ -15,11 +15,14 @@ export class AcademicDetailsComponent {
       tutoring: string;
       studyTime: string;
       absences: number | null;
+      previousGrades: number | null;
       yearLevel: string;
       subject: string ;
     }>({
       tutoring: '',
       studyTime: '',
+
+      previousGrades:  null,
       absences: null,
       yearLevel: '',
       subject: ''
@@ -33,12 +36,14 @@ export class AcademicDetailsComponent {
         absences: initialData.absences,
         yearLevel: initialData.yearLevel,
         subject: initialData.subject,
+        previousGrades: initialData.previousGrades,
         
       });
     }
   
     updateForm(key: string, value: any) {
-      const updatedValue = key === 'absences' ? parseInt(value.value, 10) || null : value.value;
+
+      const updatedValue = key === 'absences'  ? parseFloat(value.value) || null : value.value;
   
       this.form.update((old) => ({
         ...old,

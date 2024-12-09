@@ -2,9 +2,14 @@
   <div class=" bg-white justify-center flex items-center flex-col  h-screen absolute top-0 -z-10 left-0 w-screen ">
     <div class="flex gap-4 justify-center items-center">
 
-      <p class=" w-28 h-28 border-2 border-red-600 text-red-600 text-4xl items-center rounded-full border-dashed  justify-center flex">
+      <p class=" font-black w-28 h-28  bg-red-500 text-white text-4xl items-center rounded-full  justify-center flex
+      
+      shadow-orange-500
+
+      shadow-md
+      ">
         F
-      </p>
+    </p>
     </div>
     <div class="w-full  flex-col items-center flex">
       <p class="text-2xl font-semibold py-2">GPA >= 2.4</p>
@@ -14,7 +19,7 @@
 
 
   </div>
-<div class="w-full left-0 items-center flex  justify-center absolute   z-50 bottom-10  ">
+<div class="w-full flex-col gap-1 left-0 items-center flex  justify-center absolute   z-50 bottom-10  ">
 
   <button
   (click)="retake()"
@@ -23,4 +28,6 @@
   >
   retake
 </button>
+
+
 </div>

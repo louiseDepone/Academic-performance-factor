@@ -46,7 +46,8 @@ export class FormService {
         studyTime: '',
         absences: '',
         yearLevel:'',
-        subject:null
+        subject:null,
+        previousGrades:null,
       },
       description: "This section focuses on the student’s study habits, attendance, tutoring participation, and academic achievements. These details provide insight into the factors contributing to their academic success or challenges, allowing for performance analysis and improvement strategies."
     },
@@ -89,6 +90,22 @@ export class FormService {
        toSubmitBigForm = {...toSubmitBigForm, ...input}
     }
     );
+
+
+    toSubmitBigForm = {
+      "Age": toSubmitBigForm.age,
+    "Gender": toSubmitBigForm,
+    "ParentalEducation": toSubmitBigForm.parentEducation,
+    "ParentalSupport": toSubmitBigForm.parentSupport,
+    "Tutoring": toSubmitBigForm.tutoring,
+    "StudyTimeWeeklyCategory": toSubmitBigForm.studyTime,
+    "Absences": toSubmitBigForm.absences,
+    "Year Level": toSubmitBigForm.yearLevel,
+    "Subject": toSubmitBigForm.subject,
+    "Previous Grades": toSubmitBigForm.previousGrades,
+    }
+
+
     console.log(toSubmitBigForm);
   }
 
