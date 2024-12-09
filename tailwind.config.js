@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      transitionDelay: {
+        slow: '500s', // or any other value you prefer
+      },
+    },
   },
   plugins: [
     require('daisyui'),

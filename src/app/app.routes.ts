@@ -5,10 +5,11 @@ import { ParentalDetailsComponent } from './pages/form/subpage/parental-details/
 import { AcademicDetailsComponent } from './pages/form/subpage/academic-details/academic-details.component';
 import { ExtracurricularActivitiesComponent } from './pages/form/subpage/extracurricular-activities/extracurricular-activities.component';
 import { SubmitComponent } from './pages/form/subpage/submit/submit.component';
+import { ResultComponent } from './pages/form/subpage/result/result.component';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'form',
     component: MainComponent,
     children:[
       {
@@ -30,8 +31,12 @@ export const routes: Routes = [
       {
         path: '5',
         component: SubmitComponent
-      }
+      },
+    ],
 
-    ]
+  },
+  {
+    path: 'result',
+    component: ResultComponent,
   }
 ];

@@ -36,19 +36,20 @@ export class MainComponent {
   }
 
   submit(){
-    // this.formService.submit();
+   
+    this.router.navigate(['result']);
   }
   next(){
     if(this.currentRoute < 4){
       this.currentRoute += 1;
     }
-    this.router.navigate([`${this.currentRoute+1}`]);
+    this.router.navigate([`form/${this.currentRoute+1}`]);
   }
 
   back(){
     if(this.currentRoute > 0){
       this.currentRoute -= 1;
     }
-    this.router.navigate([`${this.currentRoute+1}`]);
+    this.router.navigate([`form/${this.currentRoute+1}`]);
   }
 }
