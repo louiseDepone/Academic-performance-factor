@@ -6,8 +6,14 @@ import { AcademicDetailsComponent } from './pages/form/subpage/academic-details/
 import { ExtracurricularActivitiesComponent } from './pages/form/subpage/extracurricular-activities/extracurricular-activities.component';
 import { SubmitComponent } from './pages/form/subpage/submit/submit.component';
 import { ResultComponent } from './pages/form/subpage/result/result.component';
+import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
+  {
+    path:'',
+    component:HomeComponent
+    
+  },
   {
     path: 'form',
     component: MainComponent,
