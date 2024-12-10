@@ -18,8 +18,17 @@ export class ResultComponent {
   generateGrade: GnerateGradeService = inject(GnerateGradeService);
 
   ngOnInit(): void {
-    
+
     const formData = this.formService.submitCompleteForm(); // Ensure correct structure
+   
+    for (const key in formData) {
+      if (formData[key] === null) {
+        alert("Please fill out all fields before submitting.");
+        this.router.navigate(['form/5']);
+        return;
+      }
+    }
+    localStorage.setItem('formData', JSON.stringify(formData));
     this.generateGrade.predictGrade(formData).pipe(
       catchError((err) => {
         console.error(err);
