@@ -9,7 +9,11 @@ export class GnerateGradeService {
   http = inject(HttpClient);
 
   predictGrade(data: any) {
-    const url =  'http://localhost:5000/predict';
-    return this.http.get(url, data);
+    const url =  'https://student-performance-ai-model-1.onrender.com/predict';
+    return this.http.post(url, data,{
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
   }
 }

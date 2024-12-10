@@ -94,7 +94,7 @@ export class FormService {
 
     toSubmitBigForm = {
       "Age": toSubmitBigForm.age,
-    "Gender": toSubmitBigForm,
+    "Gender": toSubmitBigForm.gender,
     "ParentalEducation": toSubmitBigForm.parentEducation,
     "ParentalSupport": toSubmitBigForm.parentSupport,
     "Tutoring": toSubmitBigForm.tutoring,
@@ -102,11 +102,12 @@ export class FormService {
     "Absences": toSubmitBigForm.absences,
     "Year Level": toSubmitBigForm.yearLevel,
     "Subject": toSubmitBigForm.subject,
+    "ExtracurricularCategory": toSubmitBigForm.extracuricularg,
     "Previous Grades": toSubmitBigForm.previousGrades,
     }
 
 
-    console.log(toSubmitBigForm);
+    return (toSubmitBigForm);
   }
 
   constructor() {}
