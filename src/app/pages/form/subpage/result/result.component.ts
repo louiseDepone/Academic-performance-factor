@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal, WritableSignal } from '@angular/core';
 import { SubmitComponent } from "../submit/submit.component";
 import { FormService } from '../../../../services/form.service';
 import { Router } from '@angular/router';
@@ -16,6 +16,8 @@ export class ResultComponent {
   router: Router = inject(Router);  
   formService: FormService = inject(FormService);
   generateGrade: GnerateGradeService = inject(GnerateGradeService);
+
+  result: WritableSignal<any> = signal("B (2.2 <= GPA < 3.0)");
 
   ngOnInit(): void {
 
@@ -37,7 +39,7 @@ export class ResultComponent {
       })
     ).subscribe((data: any) => {
       console.log(data);
-      alert("Success")
+      this.result.set(data['Predicted Grade']);
       // Optional: Handle the response data further
     });
   }
