@@ -23,7 +23,7 @@ export class ResultComponent {
       catchError((err) => {
         console.error(err);
         alert("There was an error processing your request.");
-        return (err); // Return default value to avoid breaking the stream
+        return (err); // Return default HELLO WORLD value to avoid breaking the stream
       })
     ).subscribe((data: any) => {
       console.log(data);
