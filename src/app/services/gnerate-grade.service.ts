@@ -9,7 +9,7 @@ export class GnerateGradeService {
   http = inject(HttpClient);
 
   predictGrade(data: any) {
-    const url =  'https://ai-capstone-backend.onrender.com';
+    const url =  'https://ai-capstone-backend.onrender.com/predict';
     return this.http.post(url, data,{
       headers: {
         'Content-Type': 'application/json'

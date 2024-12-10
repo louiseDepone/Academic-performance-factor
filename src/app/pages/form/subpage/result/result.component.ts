@@ -18,6 +18,7 @@ export class ResultComponent {
   generateGrade: GnerateGradeService = inject(GnerateGradeService);
 
   ngOnInit(): void {
+    
     const formData = this.formService.submitCompleteForm(); // Ensure correct structure
     this.generateGrade.predictGrade(formData).pipe(
       catchError((err) => {
