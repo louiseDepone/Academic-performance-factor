@@ -2,11 +2,11 @@
 
 <div>
   
-  <div class="space-y-1 min-h-[6rem]">
+  <div class="space-y-1 md:min-h-[6rem]">
     <p class="font-semibold text-3xl">
       Student {{ formService.progressForm()[currentRoute].title }}
   </p>
-  <div class="text-xs w-[60%]">
+  <div class="text-xs w-[60%] md:block hidden">
     {{ formService.progressForm()[currentRoute].description }}
   </div>
 </div>
@@ -22,8 +22,10 @@
       [style.background-color]="progress.progress < 100 ? 'red' : ' #1051E4 ' "
       class="bg-red-500 h-[0.4rem] rounded-full progress"
       ></div>
-    <a class="text-xs" [style.color]=" progress.progress == 100 ? ' #1051E4 '  : progress.progress == 0 ? 'black' :'red' " [routerLink]="[$index + 1]" (click)="routeCurrent($index)">
-      {{ progress.title }}
+    <a class="text-xs flex gap-1" [style.color]=" progress.progress == 100 ? ' #1051E4 '  : progress.progress == 0 ? 'black' :'red' " [routerLink]="[$index + 1]" (click)="routeCurrent($index)">
+      {{ progress.title.split(" ")[0] }} <span class="hidden md:block">
+        {{ progress.title.split(" ")[1] }}
+      </span>
     </a>
 
     </div>

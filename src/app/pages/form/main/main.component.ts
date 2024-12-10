@@ -32,7 +32,7 @@ export class MainComponent {
 
 
   ngOnInit() {
-    // this.currentRoute = (Number((window.location.href).split('/').pop())-1);
+    this.currentRoute = (Number((window.location.href).split('/').pop())-1);
   
   }
 
