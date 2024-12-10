@@ -21,8 +21,8 @@ export class MainComponent {
   currentRoute: number = (1);
 
   constructor() {
-        this.currentRoute = (Number((window.location.href).split('/').pop())-1);
-        this.router.navigate(['form/1']);
+        const routs = ((window.location.href).split('/').pop());
+        if(routs == 'form') this.router.navigate(['form/1']);
 
   }
 
