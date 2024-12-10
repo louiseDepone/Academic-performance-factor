@@ -22,6 +22,7 @@ export class MainComponent {
 
   constructor() {
         this.currentRoute = (Number((window.location.href).split('/').pop())-1);
+        this.router.navigate(['form/1']);
 
   }
 
