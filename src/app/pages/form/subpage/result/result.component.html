@@ -8,16 +8,16 @@
   <div class=" bg-white justify-center flex items-center flex-col  h-screen absolute top-0 -z-10 left-0 w-screen ">
     <div class="flex gap-4 justify-center items-center">
 
-      <p class=" font-black w-28 h-28   text-white text-4xl items-center rounded-full  justify-center flex
+      <p class=" font-black px-4 md:px-0 md:w-28 h-28   text-white text-4xl items-center rounded-full  justify-center flex
       
-      shadow-orange-500
+     
 
       shadow-md
       "
         [style.background-color]='
         result().split(" ")[0] == "A" ? "green" : 
         result().split(" ")[0] == "B" ? "yellow" : 
-        result().split(" ")[0] == "C" ? "yellow" : 
+        result().split(" ")[0] == "C" ? "purple" : 
         result().split(" ")[0] == "D" ? "orange" : "red"'
       >
         {{result().split(" ")[0]}}
