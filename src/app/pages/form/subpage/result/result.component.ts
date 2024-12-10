@@ -17,7 +17,7 @@ export class ResultComponent {
   formService: FormService = inject(FormService);
   generateGrade: GnerateGradeService = inject(GnerateGradeService);
 
-  result: WritableSignal<any> = signal("B (2.2 <= GPA < 3.0)");
+  result: WritableSignal<any> = signal("Loading (2.2 <= GPA < 3.0)");
 
   ngOnInit(): void {
 
@@ -26,7 +26,7 @@ export class ResultComponent {
     for (const key in formData) {
       if (formData[key] === null) {
         alert("Please fill out all fields before submitting.");
-        this.router.navigate(['form/5']);
+        // this.router.navigate(['form/5']);
         return;
       }
     }
@@ -34,7 +34,7 @@ export class ResultComponent {
     this.generateGrade.predictGrade(formData).pipe(
       catchError((err) => {
         console.error(err);
-        alert("There was an error processing your request.");
+        // alert("There was an error processing your request.");
         return (err); // Return default HELLO WORLD value to avoid breaking the stream
       })
     ).subscribe((data: any) => {

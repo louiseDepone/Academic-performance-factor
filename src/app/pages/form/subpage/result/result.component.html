@@ -5,10 +5,12 @@
     F LOWEST
 
 -->
+
+@if(result().split(" ")[0] != "Loading"){
   <div class=" bg-white justify-center flex items-center flex-col  h-screen absolute top-0 -z-10 left-0 w-screen ">
     <div class="flex gap-4 justify-center items-center">
 
-      <p class=" font-black px-4 md:px-0 md:w-28 h-28   text-white text-4xl items-center rounded-full  justify-center flex
+      <p class=" font-black w-28 h-28   text-white text-4xl items-center rounded-full  justify-center flex
       
      
 
@@ -25,13 +27,15 @@
     </div>
     <div class="w-full  flex-col items-center flex">
       <p class="text-2xl font-semibold py-2"> {{result().split("(")[1].split(")")[0]}}</p>
-      <p class="text-sm w-1/3  text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus facilis, vitae sequi molestiae minima vel error exercitationem modi tenetur quasi maiores possimus quas laboriosam reiciendis soluta aperiam deserunt ducimus!</p>
+      <p class="text-sm px-5 md:px-0 md:w-1/3  text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus facilis, vitae sequi molestiae minima vel error exercitationem modi tenetur quasi maiores possimus quas laboriosam reiciendis soluta aperiam deserunt ducimus!</p>
     </div>
 
 
 
   </div>
-<div class="w-full flex-col gap-1 left-0 items-center flex  justify-center absolute   z-50 bottom-10  ">
+
+
+(<div class="w-full flex-col gap-1 left-0 items-center flex  justify-center absolute   z-50 bottom-10  ">
 
   <button
   (click)="retake()"
@@ -40,6 +44,12 @@
   >
   retake
 </button>
+</div>)
+}
+@else{
 
-
-</div>
+  <div class="w-full h-full flex justify-center items-cent">
+    Loading...
+    </div>
+ 
+}
