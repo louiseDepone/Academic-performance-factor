@@ -27,6 +27,7 @@ export class ResultComponent {
       })
     ).subscribe((data: any) => {
       console.log(data);
+      alert("Success")
       // Optional: Handle the response data further
     });
   }
