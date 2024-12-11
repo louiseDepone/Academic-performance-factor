@@ -1,17 +1,60 @@
-<div class="flex flex-col  gap-4 text-[rgb(11,18,21)]">
-  <p class="font-extrabold text-5xl ">Academic <br>  Performance <br> Predictor</p>
-  <p class="text-lg ">
-    Empowering educators and parents with insights to
-    <br>  students' academic performance
+
+<div class="flex flex-col  gap-4 text-[rgb(11,18,21)]  absolute top-14 left-0 -z-30">
+  <div class=" w-full -z-500">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,128L26.7,128C53.3,128,107,128,160,144C213.3,160,267,192,320,186.7C373.3,181,427,139,480,101.3C533.3,64,587,32,640,64C693.3,96,747,192,800,224C853.3,256,907,224,960,208C1013.3,192,1067,192,1120,181.3C1173.3,171,1227,149,1280,138.7C1333.3,128,1387,128,1413,128L1440,128L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path></svg>
+  </div>
+  <div class="z-10 w-full px-10 ">
+   <div class="w-full flex flex-col justify-center items-center -mt-[59px]">
+    
+    <p class="font-extrabold text-5xl  text-center">Academic   Performance <br> Predictor</p>
+    <p class="text-center text-sm pt-2">
+      Empowering educators and parents with insights to
+       students' <br>  academic performance
+    </p>
+  
+    <div class="pt-5">
+  
+  
+      <button
+        class="px-4 py-2  text-white btn btn-primary rounded-lg "
+        (click)="navigateToTest()"
+        >
+        Take Test
+      </button> 
+  </div>
+
+
+  <div class="pt-28 w-full  flex flex-col justify-center items-center">
+    <strong class="text-lg">About our Model</strong>
+
+    <div class="flex gap-5 w-full">
+
+      <div class="flex-1 flex flex-col items-center">
+       
+        <img src="./assets/ConfusionMatrix.png" class="p-10" alt="Confusion Matrix">
+      </div>
+      <div class="flex-1 flex flex-col items-center ">
+     
+
+        <img src="./assets/modelMetrics.png" class="p-10"alt="Model Matrix">
+    
+      </div>
+    </div>
+  </div>
+  <p>
+    Algorithm Used: <span class="font-bold">    Naive-Bayes Algorithm </span> 
   </p>
+  
+  <div class="pt-5 w-full flex flex-col justify-center items-center">
+    <strong class="text-lg py-8">Tech Stack</strong>
+    <div class="flex w-full gap-2  justify-center ">
+      <img src="./assets/colab.png" class="size-1/5" alt="">
 
-  <div class="pt-3">
+      <img src="./assets/flask.png" class="size-1/5" alt="">
 
+      <img src="./assets/angular.png"class="size-1/6"alt="">
+    </div>
+  </div>
 
-    <button
-      class="px-4 py-2  text-white btn btn-primary rounded-lg "
-      (click)="navigateToTest()"
-      >
-      Take Test
-    </button> 
+</div>
   </div>
