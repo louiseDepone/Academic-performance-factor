@@ -33,12 +33,14 @@
     </p>
     <p class="text-sm px-5 md:px-0 md:w-1/3 text-justify">
       @if(result().split(' ')[0] == 'A') {
-      <span>Excellent performance, keep it up!</span>} @if ( result().split('
-      ')[0] == 'B') { <span>Good job, but there's room for improvement.</span>}
+      <span>Excellent performance, keep it up!</span>} 
+      @if ( result().split(' ')[0] == 'B') { 
+        <span>Good job, but there's room for improvement.</span>}
       @if ( result().split(' ')[0] == 'C') {
       <span>Fair effort, but the student need to work harder.</span>} @if (
       result().split(' ')[0] == 'D') {
-      <span *>Below average, consider seeking help.</span>} @if (
+      <span *>Below average, consider seeking help.</span>} 
+      @if (
       result().split(' ')[0] == 'F') {
       <span>Poor performance, significant improvement needed.</span>}
     </p>
