@@ -5,8 +5,9 @@
     F LOWEST
 
 -->
-
-<div *ngIf="result().split(' ')[0] != 'Loading'; else loading">
+@if (
+  result().split(" ")[0] == "Loading" 
+) {
   <div class=" bg-white justify-center flex items-center flex-col  h-screen absolute top-0 -z-10 left-0 w-screen ">
     <div class="flex gap-4 justify-center items-center">
 
@@ -30,12 +31,18 @@
       <p class="text-sm px-5 md:px-0 md:w-1/3  text-justify">
 
 
-      <span *ngIf="result().split(' ')[0] == 'A'">Excellent performance, keep it up!</span>
-      <span *ngIf="result().split(' ')[0] == 'B'">Good job, but there's room for improvement.</span>
-      <span *ngIf="result().split(' ')[0] == 'C'">Fair effort, but the student need to work harder.</span>
-      <span *ngIf="result().split(' ')[0] == 'D'">Below average, consider seeking help.</span>
-      <span *ngIf="result().split(' ')[0] == 'F'">Poor performance, significant improvement needed.</span>
-      </p>
+
+      @if(result().split(' ')[0] == 'A') {
+        <span >Excellent performance, keep it up!</span>}
+      @if (
+        result().split(' ')[0] == 'B') {
+        <span >Good job, but there's room for improvement.</span>}
+      @if ( result().split(' ')[0] == 'C') {
+        <span>Fair effort, but the student need to work harder.</span>}
+      @if ( result().split(' ')[0] == 'D') {
+        <span *>Below average, consider seeking help.</span>}
+      @if ( result().split(' ')[0] == 'F') {
+        <span >Poor performance, significant improvement needed.</span>}
     </div>
 
 
@@ -53,9 +60,10 @@
   retake
 </button>
 </div>
-</div>
-<ng-template #loading>
+}@else {
+
   <div class="flex justify-center items-center h-screen">
     <div class="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
   </div>
-</ng-template>
+}
+
