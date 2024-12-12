@@ -15,11 +15,11 @@ export class PersonalInformationComponent {
 
   // Reactive Signal to manage the form state
   form  = signal<{
-    studentId: string;
+    // studentId: string;
     age: number | null,
     gender: string;
   }>({
-    studentId: '',
+    // studentId: '',
     age : null,
     gender: '',
   });
@@ -27,7 +27,7 @@ export class PersonalInformationComponent {
   constructor() {
     const initialData = this.formService.progressForm()[0].form;
     this.form.set({
-      studentId: initialData.studentId,
+      // studentId: initialData.studentId,
       age: initialData.age,
       gender: initialData.gender,
     });

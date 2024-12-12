@@ -20,7 +20,7 @@ export class FormService {
       title: 'Personal Details',
       progress: 0,
       form: {
-        studentId: '',
+        // studentId: '',
         age: null,
         gender: '',
       },
