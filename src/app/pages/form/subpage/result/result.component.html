@@ -6,7 +6,7 @@
 
 -->
 
-@if(result().split(" ")[0] != "Loading"){
+<div *ngIf="result().split(' ')[0] != 'Loading'; else loading">
   <div class=" bg-white justify-center flex items-center flex-col  h-screen absolute top-0 -z-10 left-0 w-screen ">
     <div class="flex gap-4 justify-center items-center">
 
@@ -27,7 +27,15 @@
     </div>
     <div class="w-full  flex-col items-center flex">
       <p class="text-2xl font-semibold py-2"> {{result().split("(")[1].split(")")[0]}}</p>
-      <p class="text-sm px-5 md:px-0 md:w-1/3  text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti temporibus facilis, vitae sequi molestiae minima vel error exercitationem modi tenetur quasi maiores possimus quas laboriosam reiciendis soluta aperiam deserunt ducimus!</p>
+      <p class="text-sm px-5 md:px-0 md:w-1/3  text-justify">
+
+
+      <span *ngIf="result().split(' ')[0] == 'A'">Excellent performance, keep it up!</span>
+      <span *ngIf="result().split(' ')[0] == 'B'">Good job, but there's room for improvement.</span>
+      <span *ngIf="result().split(' ')[0] == 'C'">Fair effort, but the student need to work harder.</span>
+      <span *ngIf="result().split(' ')[0] == 'D'">Below average, consider seeking help.</span>
+      <span *ngIf="result().split(' ')[0] == 'F'">Poor performance, significant improvement needed.</span>
+      </p>
     </div>
 
 
@@ -45,11 +53,9 @@
   retake
 </button>
 </div>
-}
-@else{
-
-  <div class="w-full h-full flex justify-center animate-spin items-cent">
+</div>
+<ng-template #loading>
+  <div class="w-full h-full flex justify-center animate-spin items-center">
     Loading...
-    </div>
- 
-}
+  </div>
+</ng-template>
