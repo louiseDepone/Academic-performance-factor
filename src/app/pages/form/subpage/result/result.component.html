@@ -33,20 +33,63 @@
     </p>
     <p class="text-sm px-5 md:px-0 md:w-1/3 text-justify">
       @if(result().split(' ')[0] == 'A') {
-      <span>🎉 Congratulations! Your excellence and dedication to education are outstanding. You can expect a high grade this semester or school year, ranging from 3.0 to a perfect 4.0. That equates to 90% to 100% grades when evaluated in most schools. Keep up the hard work and continue to inspire others with your academic achievements!</span>} 
+      <span>🎉 Congratulations! Your excellence and dedication to education are outstanding. You can expect a high grade this semester or school year, ranging from 3.0 to a perfect 4.0. That equates to 90% to 100% grades when evaluated in most schools. Keep up the hard work and continue to inspire others with your academic achievements!</span>
+      
+      
+        <strong class="py-5"> Recommendation </strong>
+
+      <p>Maintain consistency in your studies.
+Consider challenging yourself with advanced coursework or extracurricular activities to maximize your potential.
+Share your knowledge by mentoring others.
+B: 2.2 <= GPA < 3.0</p>
+      
+      } 
       @if ( result().split(' ')[0] == 'B') { 
         <span>
-👏 Good effort! Your grades are above average, indicating your dedication and progress. Your GPA of 2.2 to 3.0 reflects a performance level equivalent to 80% to 89% in most schools. You are on the right track, and with a little more focus, you can achieve even greater results.</span>}
+👏 Good effort! Your grades are above average, indicating your dedication and progress. Your GPA of 2.2 to 3.0 reflects a performance level equivalent to 80% to 89% in most schools. You are on the right track, and with a little more focus, you can achieve even greater results.</span>
+            <strong class="py-5"> Recommendation </strong>
+
+      <p>Identify areas where you can improve and dedicate more time to them.
+Stay consistent in your study habits and seek help when needed.
+Join study groups or utilize learning resources to enhance understanding.
+C: 1.5 <= GPA < 2.2</p>
+      
+      }
       @if ( result().split(' ')[0] == 'C') {
       <span>
-🌱 Keep going! Your GPA of 1.5 to 2.2 reflects a fair performance, roughly equivalent to 70% to 79% grades in most schools. While you are meeting basic expectations, there's room to grow and achieve greater success.</span>} @if (
+🌱 Keep going! Your GPA of 1.5 to 2.2 reflects a fair performance, roughly equivalent to 70% to 79% grades in most schools. While you are meeting basic expectations, there's room to grow and achieve greater success.</span>
+      <strong class="py-5"> Recommendation </strong>
+
+      <p>Reflect on your study habits and identify distractions or challenges affecting your performance.
+Seek support from teachers, mentors, or peers to clarify difficult concepts.
+Create a detailed study plan and set realistic goals to build momentum.
+D: 0.8 <= GPA < 1.5</p>
+      
+      } @if (
       result().split(' ')[0] == 'D') {
       <span *>
-💡 Don't give up! Your GPA of 0.8 to 1.5 indicates challenges in meeting academic expectations, corresponding to 60% to 69% grades in most schools. However, this is an opportunity to reassess and make meaningful changes to your approach.</span>} 
+💡 Don't give up! Your GPA of 0.8 to 1.5 indicates challenges in meeting academic expectations, corresponding to 60% to 69% grades in most schools. However, this is an opportunity to reassess and make meaningful changes to your approach.</span>
+            <strong class="py-5"> Recommendation </strong>
+
+      <p>Meet with your teachers or academic advisors to identify specific areas needing improvement.
+Allocate dedicated time for studying and avoid distractions.
+Focus on foundational concepts to build a stronger understanding.
+Stay positive—small, consistent improvements can lead to significant progress.
+F: GPA < 0.8</p>
+      
+      } 
       @if (
       result().split(' ')[0] == 'F') {
       <span>
-🚨 Immediate attention needed. Your GPA is currently below 0.8, equivalent to less than 60% grades in most schools. This indicates significant struggles with your academic performance. While this might feel discouraging, it's important to know that improvement is possible with the right approach and support.</span>}
+🚨 Immediate attention needed. Your GPA is currently below 0.8, equivalent to less than 60% grades in most schools. This indicates significant struggles with your academic performance. While this might feel discouraging, it's important to know that improvement is possible with the right approach and support.</span>
+      <strong class="py-5"> Recommendation </strong>
+
+      <p>Schedule a meeting with a counselor or academic advisor to create an action plan.
+Prioritize core subjects and focus on understanding the basics.
+Explore alternative learning methods, such as visual aids or hands-on activities, to find what works best for you.
+Stay committed and don't hesitate to ask for help. Progress is within reach with determination.</p>
+      
+      }
     </p>
   </div>
 </div>
